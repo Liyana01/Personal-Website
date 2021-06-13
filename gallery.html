@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>Gallery</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css"
+href="style1.css"/>
+</head>
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+</style>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+<body>
+<div class="topnav">
+  <h2><a href="asignment.html" style= "float:left;">Home</a></h2>
+  <h2><a href="#photo" style="float:right;">Photo</a></h2>
+</div>
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+<br>
+<br>
+<!-- Header 1-->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-text-white"><span class="w3-padding w3-light-grey w3-opacity-min"><b>GALLERY</b></span></h1>
+  </div>
+</header>
+<br>
+<br>
+<br>
+
+<!-- Header 2-->
+<div class="w3-opacity">
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+  <h1><b>PHOTO</b></h1>
+  <p>Precious momment.</p>
+  <p class="w3-padding-16"><button class="w3-button w3-black" onclick="myFunction()">Toggle Grid Padding</button></p>
+</header>
+</div>
+
+<!-- Photo Grid -->
+<div class="w3-row" id="myGrid" style="margin-bottom:128px">
+  <div class="w3-third">
+    <img src="website/image/orkid.jpg" style="width:100%">
+    <img src="website/image/taqwa.jpg" style="width:100%">
+    <img src="website/image/bas.jpg" style="width:100%">
+  </div>
+
+  <div class="w3-third">
+    <img src="website/image/makan.jpg" style="width:100%">
+    <img src="website/image/perlis.jpg" style="width:100%">
+    <img src="website/image/kampung.jpg" style="width:100%">
+    <img src="website/image/haziq.jpg" style="width:100%">
+    <img src="website/image/interim.jpg" style="width:100%;">
+  </div>
+
+  <div class="w3-third">
+    <img src="website/image/fatin.jpg" style="width:100%">
+    <img src="website/image/dedaun.jpg" style="width:100%">
+    <img src="website/image/kuantan.jpg" style="width:140%">
+    <img src="website/image/laut.jpg" style="width:140%; height:32.5%;">
+  </div>
+</div>
+
+
+<!-- End Page Content -->
+</div>
+
+<script>
+// Toggle grid padding
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  if (x.className === "w3-row") {
+    x.className = "w3-row-padding";
+  } else { 
+    x.className = x.className.replace("w3-row-padding", "w3-row");
+  }
+}
+
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-blue w3-padding-16">
+</footer>
+
+</body>
+</html>
